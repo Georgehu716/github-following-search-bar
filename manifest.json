@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Github following search bar",
+    "description": "A chrome extension for searching GitHub following users.",
+    "version": "0.0.1",
+    "action": {
+        "default_popup": "popup/index.html",
+        "default_icon": "images/github-icon.png"
+    }
+}
