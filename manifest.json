@@ -3,8 +3,23 @@
     "name": "Github following search bar",
     "description": "A chrome extension for searching GitHub following users.",
     "version": "0.0.1",
+
+    "icons": {
+        "16": "images/github-icon.png",
+        "32": "images/github-icon.png",
+        "48": "images/github-icon.png",
+        "128": "images/github-icon.png"
+    },
+
     "action": {
-        "default_popup": "popup/index.html",
-        "default_icon": "images/github-icon.png"
-    }
+        "default_popup": "popup/index.html"
+    },
+    "content_scripts": [
+        {
+            "js": ["scripts/content.js"],
+            "matches": [
+                "https://github.com/*?tab=following"
+            ]
+        }
+    ]
 }
