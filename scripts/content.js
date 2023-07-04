@@ -23,4 +23,6 @@ newSearchForm.addEventListener("submit", (event) => {
 
     const newSearchInput = document.getElementById("new-search-input")
     console.log("new search input: ", newSearchInput.value)
+    const currentUser = window.location.pathname.slice(1)
+    console.log("current github user: ", currentUser)
 })
