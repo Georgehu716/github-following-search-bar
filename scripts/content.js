@@ -1,5 +1,6 @@
 console.log("Hi, GitHub following search bar.")
 
+// Insert search bar form into following page
 const userProfileFrame = document.getElementById("user-profile-frame")
 const searchDiv= document.createElement("div")
 searchDiv.id = "new-search-div"
@@ -17,12 +18,21 @@ function getSearchForm() {
 searchDiv.innerHTML = getSearchForm()
 userProfileFrame.insertAdjacentElement("beforebegin", searchDiv)
 
+// Search from following users
 const newSearchForm = document.getElementById("new-search-form")
 newSearchForm.addEventListener("submit", (event) => {
     event.preventDefault()
 
+    const currentUser = window.location.pathname.slice(1)
     const newSearchInput = document.getElementById("new-search-input")
     console.log("new search input: ", newSearchInput.value)
-    const currentUser = window.location.pathname.slice(1)
     console.log("current github user: ", currentUser)
 })
+
+
+// Get all of current github user following
+// Store following users data in chrome
+function getAllFollowingUsers(username) {
+    // TODO: get all of current github user following
+}
+
